@@ -13,6 +13,10 @@ import NotFound from "./pages/NotFound";
 import AllAssessmentsPage from "./pages/AllAssesmentsPage";
 import AllStudentsPage from "./pages/AllStudentsPage"
 import CreateAssessmentsPage from "./pages/CreateAssessmentsPage";
+import EditAssessment from "./pages/EditAssessment";
+import AssessmentResult from "./pages/AssessmentResult";
+import StudentProgressPage from "./pages/StudentProgress";
+import About from "./pages/About";
 
 const queryClient = new QueryClient();
 
@@ -32,7 +36,11 @@ const App = () => (
             <Route path="/assessments" element={<AllAssessmentsPage />} />
             <Route path="/students" element={<AllStudentsPage />} />
             <Route path="/create-assessment" element={<CreateAssessmentsPage/>} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="/edit-assessment/:id" element={<EditAssessment />} />
+            <Route path="/view-results/:id" element={<AssessmentResult />} />
+            <Route path="/student/:id" element={<StudentProgressPage />} />
+            <Route path="/about" element={ <About /> } />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

@@ -14,7 +14,13 @@ import { LogOut, User } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Header() {
-  const { currentUser, logout } = useAuth();
+  const { logout } = useAuth();
+
+const currentUser = {
+  name: 'Pranali Sharma',
+  avatar: '/P.png',
+};
+
 
   const getInitials = (name: string) => {
     return name

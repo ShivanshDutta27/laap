@@ -77,7 +77,7 @@ export default function LandingPage() {
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Unlock Learning Potential with Agile Learn
+                  Unlock Your Learning Potential with Agile Learn
                 </h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Our platform helps teachers evaluate and enhance students' learning speed through
@@ -107,7 +107,7 @@ export default function LandingPage() {
             </div>
             <div className="mx-auto flex w-full items-center justify-center">
               <img
-                src="/placeholder.svg"
+                src="/home.jpg"
                 width={550}
                 height={400}
                 alt="Hero Image"

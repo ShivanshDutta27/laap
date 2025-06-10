@@ -4,42 +4,42 @@ import { User, Assessment, StudentAssessment, Progress, Question } from '../type
 export const mockUsers: User[] = [
   {
     id: '1',
-    name: 'Ravi Sharma',
+    name: 'Pranali Sharma',
     email: 'teacher@example.com',
     role: 'teacher',
-    avatar: 'https://i.pravatar.cc/150?img=32'
+    avatar: '/P.png'
   },
   {
     id: '2',
     name: 'Aarav Gupta',
     email: 'student@example.com',
     role: 'student',
-    avatar: 'https://i.pravatar.cc/150?img=12'
+    avatar: '/A.avif'
   },
   {
     id: '3',
     name: 'Priya Patel',
     email: 'priya.patel@example.com',
     role: 'student',
-    avatar: 'https://i.pravatar.cc/150?img=25'
+    avatar: '/P.png'
+
   },
   {
     id: '4',
     name: 'Sanya Mehra',
     email: 'sanya.mehra@example.com',
     role: 'student',
-    avatar: 'https://i.pravatar.cc/150?img=53'
+    avatar: '/S.png'
   },
   {
     id: '5',
     name: 'Arjun Desai',
     email: 'arjun.desai@example.com',
     role: 'student',
-    avatar: 'https://i.pravatar.cc/150?img=44'
+    avatar: '/A.png'
   }
 ];
 
-// Mock Questions (Learning Agility Based)
 export const mockQuestions: Question[] = [
   {
     id: 'q1',
@@ -98,7 +98,6 @@ export const mockQuestions: Question[] = [
   }
 ];
 
-// Mock Assessments (Learning Agility Based)
 export const mockAssessments: Assessment[] = [
   {
     id: 'a1',
@@ -135,7 +134,6 @@ export const mockAssessments: Assessment[] = [
   }
 ];
 
-// Mock Student Assessments
 export const mockStudentAssessments: StudentAssessment[] = [
   {
     id: 'sa1',
@@ -144,75 +142,87 @@ export const mockStudentAssessments: StudentAssessment[] = [
     startedAt: '2023-01-20T14:30:00Z',
     completedAt: '2023-01-20T14:38:00Z',
     score: 80,
-    answers: [
-      {
-        questionId: 'q1',
-        selectedOptionId: 'o1',
-        timeSpent: 45,
-        isCorrect: true
-      },
-      {
-        questionId: 'q3',
-        selectedOptionId: 'o9',
-        timeSpent: 32,
-        isCorrect: true
-      },
-      {
-        questionId: 'q4',
-        selectedOptionId: 'o13',
-        timeSpent: 60,
-        isCorrect: true
-      }
-    ],
-    status: 'completed'
+    answers: [  ],
+    status: 'completed',
   },
   {
     id: 'sa2',
+    assessmentId: 'a1',
+    studentId: '3',
+    startedAt: '2023-01-22T09:00:00Z',
+    completedAt: '2023-01-22T09:08:00Z',
+    score: 60,
+    answers: [  ],
+    status: 'completed',
+  },
+  {
+    id: 'sa3',
+    assessmentId: 'a1',
+    studentId: '4',
+    startedAt: '2023-01-23T11:15:00Z',
+    completedAt: '2023-01-23T11:24:00Z',
+    score: 90,
+    answers: [  ],
+    status: 'completed',
+  },
+  {
+    id: 'sa4',
     assessmentId: 'a2',
     studentId: '2',
     startedAt: '2023-02-15T10:15:00Z',
     completedAt: '2023-02-15T10:19:00Z',
     score: 70,
-    answers: [
-      {
-        questionId: 'q2',
-        selectedOptionId: 'o5',
-        timeSpent: 25,
-        isCorrect: true
-      },
-      {
-        questionId: 'q5',
-        selectedOptionId: 'o17',
-        timeSpent: 40,
-        isCorrect: true
-      }
-    ],
-    status: 'completed'
-  }
+    answers: [],
+    status: 'completed',
+  },
+  {
+    id: 'sa5',
+    assessmentId: 'a2',
+    studentId: '5',
+    startedAt: '2023-02-16T14:00:00Z',
+    completedAt: '2023-02-16T14:05:00Z',
+    score: 85,
+    answers: [ ],
+    status: 'completed',
+  },
 ];
 
-// Mock Progress Data
 export const mockProgress: Progress[] = [
   {
     studentId: '2',
     assessments: [
-      {
-        assessmentId: 'a1',
-        score: 80,
-        completedAt: '2023-01-20T14:38:00Z',
-        timeSpent: 480, // in seconds
-        difficultyLevel: 'medium'
-      },
-      {
-        assessmentId: 'a2',
-        score: 70,
-        completedAt: '2023-02-15T10:19:00Z',
-        timeSpent: 240,
-        difficultyLevel: 'easy'
-      }
+      { assessmentId: 'a1', score: 80, completedAt: '2023-01-20T14:38:00Z', timeSpent: 480, difficultyLevel: 'medium' },
+      { assessmentId: 'a2', score: 70, completedAt: '2023-02-15T10:19:00Z', timeSpent: 240, difficultyLevel: 'easy' },
     ],
     averageScore: 75,
     averageTimeSpent: 360,
-    improvementRate: 0.1
-  }
+    improvementRate: 0.1,
+  },
+  {
+    studentId: '3',
+    assessments: [
+      { assessmentId: 'a1', score: 60, completedAt: '2023-01-22T09:08:00Z', timeSpent: 480, difficultyLevel: 'medium' },
+    ],
+    averageScore: 60,
+    averageTimeSpent: 480,
+    improvementRate: 0,
+  },
+  {
+    studentId: '4',
+    assessments: [
+      { assessmentId: 'a1', score: 90, completedAt: '2023-01-23T11:24:00Z', timeSpent: 540, difficultyLevel: 'medium' },
+    ],
+    averageScore: 90,
+    averageTimeSpent: 540,
+    improvementRate: 0,
+  },
+  {
+    studentId: '5',
+    assessments: [
+      { assessmentId: 'a2', score: 85, completedAt: '2023-02-16T14:05:00Z', timeSpent: 300, difficultyLevel: 'medium' },
+    ],
+    averageScore: 85,
+    averageTimeSpent: 300,
+    improvementRate: 0,
+  },
 ];
