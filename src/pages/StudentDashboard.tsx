@@ -11,11 +11,8 @@ import { Award, BookCheck, Clock } from 'lucide-react';
 import { Assessment, StudentAssessment } from '@/types';
 
 const chartData = [
-  { name: 'Quiz 1', score: 75, time: 580 },
-  { name: 'Quiz 2', score: 60, time: 520 },
-  { name: 'Mid-term', score: 82, time: 1200 },
-  { name: 'Quiz 3', score: 88, time: 480 },
-  { name: 'Final', score: 90, time: 1800 },
+  { name: 'Assessment 1', score: 70, time: 580 },
+  { name: 'Assessment 2', score: 80, time: 520 },
 ];
 
 export default function StudentDashboard() {
